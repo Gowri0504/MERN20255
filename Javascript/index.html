@@ -1,0 +1,75 @@
+
+<html>
+
+<head>
+    <title>Toggle Text Example</title>
+</head>
+<style>
+    body {
+        font-family: 'Georgia', serif;
+        background-color: #f0f0f0;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    h2 {
+        color: #333;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <h2 id="message">Hello Gowri</h2>
+    <button onclick="toggleText()">Click Me</button>
+    <button onclick="toggleColor()">Colour Change</button>
+    <input type="text" id="inputText" placeholder="Type something here...">
+    <button onclick="addname()">Add Name</button>
+    <ul id="nameList"></ul>
+    <button onclick="window.location.href='https://www.google.com'">Go to Google</button>
+    <script>
+        function toggleText() {
+            var msg = document.getElementById("message");
+            if (msg.innerText === "Hello Gowri") {
+                msg.innerText = "Bye Gowri";
+            } else {
+                msg.innerText = "Hello Gowri";
+            }
+        }
+
+        function toggleColor() {
+            var msg = document.getElementById("message");
+            if (msg.style.color === "blue") {
+                msg.style.color = "green";
+            } else {
+                msg.style.color = "blue";
+            }
+        }
+
+        var addname=()=>{
+            var input = document.getElementById("inputText").value;
+            if (input.trim() !== "") {
+                var li = document.createElement("li");
+                li.textContent = input;
+                document.getElementById("nameList").appendChild(li);
+                // document.getElementById("inputText").value = ""; // Clear input field
+            } else {
+                alert("Please enter a name.");
+            }   
+
+        }
+
+
+
+
+        document.getElementById("message").style.color = "blue"; // Initial color
+        document.getElementById("message").style.fontSize = "24px"; // Initial font size
+        document.getElementById("message").style.fontWeight = "italic"; // Initial font weight        
+    </script>
+
+</body>
+
+</html>

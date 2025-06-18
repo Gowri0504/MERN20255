@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 100px 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px 100px;
+            gap: 10px;
+        }
+        .child{
+            background-color: lightblue;
+            border: 2px solid black;
+            padding: 10px;
+        }
+        .header{
+            grid-column: 1/5;
+        }
+        .sidebar{
+            grid-row: 2/4;
+        }
+        .content{
+            grid-row: 2/4;
+            grid-column: 2/5;
+        }
+        .footer{
+            grid-column: 1/5;
+        }
+        .navbar a {
+        
+            text-decoration: burlywood;
+            color: rgb(9, 126, 77);
+        }
+        .navbar a:hover {
+            color: rgb(0, 0, 0);
+        }
+        h1, h2, p {
+            text-align: center;
+            font-family: fantasy;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="child header"><h2>!!! GOWRI WELCOMES YOU !!!</h2></div>
+        <div class="child sidebar"><nav class="navbar"><a href="#">Home</a><br><br>
+        <a href="#">Services</a><br><br>
+        <a href="#">Content!</a><br><br>
+        <a href="#">About</a></nav></div>
+        <div class="child content"><h1>Class</h1><p>This is Full Stack Trainig Class.</p></div>
+        <div class="child footer"><footer><p>© 2023 GOWRI. All rights reserved.</p></footer></div>
+    </div>
+</body> 
+
+</html>

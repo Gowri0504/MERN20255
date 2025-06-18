@@ -1,0 +1,110 @@
+PS D:\Mern2025> git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=Gowri
+user.email=gowrid.23it@kongu.edu
+filter.lfs.clean=git-lfs clean -- %f
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=Gowri
+user.email=gowrid.23it@kongu.edu
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=Gowri
+user.email=gowrid.23it@kongu.edu
+filter.lfs.clean=git-lfs clean -- %f
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=Gowri
+user.email=gowrid.23it@kongu.edu
+filter.lfs.clean=git-lfs clean -- %f
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=Gowri
+user.email=gowrid.23it@kongu.edu
+filter.lfs.clean=git-lfs clean -- %f
+user.name=Gowri
+user.email=gowrid.23it@kongu.edu
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+PS D:\Mern2025>
+PS D:\Mern2025> git add index.html
+fatal: not a git repository (or any of the parent directories): .git   
+PS D:\Mern2025> git init
+Initialized empty Git repository in D:/Mern2025/.git/
+PS D:\Mern2025> git add index.html
+PS D:\Mern2025> git commit -m "message"
+[master (root-commit) c090634] message
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+PS D:\Mern2025> git branch -M main
+PS D:\Mern2025> git remote add origin https://github.com/Gowri0504/Mern2025.git
+PS D:\Mern2025> git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 208 bytes | 208.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Gowri0504/Mern2025.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+PS D:\Mern2025> git add index.html
+PS D:\Mern2025> git commit -m "index modified"
+[main 9125ef8] index modified
+ 1 file changed, 12 insertions(+)
+PS D:\Mern2025> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 414 bytes | 414.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Gowri0504/Mern2025.git
+   c090634..9125ef8  main -> main
+PS D:\Mern2025> git checkout -b 'gowri'
+Switched to a new branch 'gowri'
+PS D:\Mern2025>          
+
