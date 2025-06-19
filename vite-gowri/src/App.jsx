@@ -1,35 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import Child from './components/Child.jsx';
+import Home from './pages/Home.jsx';
+import About from './pages/About.jsx';
+import Contact from './pages/Contact.jsx';
+import Skill from './pages/Skill.jsx';
+import Login from './pages/Login.jsx'; // ✅ Corrected import path
+import Counter from './components/Counter.jsx'; // ✅ Corrected import path
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  var frds = ["Gowrii", "Durga", "Booma", "Karthik", "Vijay", "Ravi", "Suresh"];
+  var user = { username: "Gowri", userpassword: "Gowri" };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div>
+      {/* Render Child components */}
+      <Child name="Gowri" phno="1234567890" Dept="IT" />
+      <Child name="John" phno="0987654321" Dept="HR" />
 
-export default App
+      {/* Render Home with props */}
+      <Home items={frds} users={user} />
+
+      {/* Render other pages */}
+      <About />
+      <Contact />
+      <Skill />
+
+      {/* Render Login component */}
+      <Login />
+      <Counter />
+    </div>
+  );
+};
+
+export default App;
