@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 
-const SymptomSchema = new mongoose.Schema({
+const symptomSchema = new mongoose.Schema({
   name: String,
-  associatedDiseases: [String]
+  description: String,
+  severity: String
 });
 
-module.exports = mongoose.model('Symptom', SymptomSchema);
+module.exports = mongoose.model('Symptom', symptomSchema);
