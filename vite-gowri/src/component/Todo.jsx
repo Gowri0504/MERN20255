@@ -28,7 +28,7 @@ const Todo = () => {
         }
 
         setediting(null);
-        fetchTodo()
+        fetchTodo();
     }
     const handleDelete = async (id) => {
         await axios.delete(`${api}/todo/delete/${id}`);
