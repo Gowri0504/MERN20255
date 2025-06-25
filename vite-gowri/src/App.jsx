@@ -11,7 +11,8 @@ import { Routes, Route } from 'react-router-dom'
 import State from './hooks/State'
 import Hooks from './pages/Hooks'
 import Effect from './hooks/Effect'
-import Ref from "./hooks/Ref";   // ✅ Correct if hooks is in the same folder (src)
+import Ref from "./hooks/Ref" 
+import Todo from './component/Todo' // ✅ Correct if hooks is in the same folder (src)
 const App = () => {
   return (
     //     <div>
@@ -34,12 +35,12 @@ const App = () => {
         <Route path='/contact' element={<Contact />} />
         <Route path='/skill' element={<Skill />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/signup' element={<Signup />} />
         <Route path='/counter' element={<Counter />} />
         <Route path='/hooks' element={<Hooks />} />
         <Route path='/state' element={<State />} />
         <Route path='/effect' element={<Effect />} />
         <Route path='/ref' element={<Ref />} />
+        <Route path='/todo' element={<Todo />} />
       </Routes>
     </div>
   )

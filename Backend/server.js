@@ -1,22 +1,36 @@
-const express = require('express');
-const dotenv = require('dotenv');
-const connectDB = require('./config/db');
-const router = require('./routers/egRouter'); // ✅ Import your router
+// const express = require('express');
+// const dotenv = require('dotenv');
+// const connectDB = require('./config/db')
+// const router = require('./routers/egRouters.js')
+// dotenv.config();
+// const app = express();
+// const PORT = process.env.PORT;
+// app.use(express.json());
+// app.use(router);
+// connectDB();
+// app.listen(PORT,()=>{
+//     console.log(`server running on port http://localhost:${PORT}`);
+// });
 
-dotenv.config();    
+const express=require('express')
+const dotenv =require('dotenv')
 
-const app = express();
+const connectDB = require('./config/db')//for the connection
+const cors=require('cors') //for the cross origin resource sharing
+const router = require('./routes/egRouters')
+const todorouter=require('./routes/todoRouters.js')
+
+dotenv.config()
+const app=express()
+
 const PORT = process.env.PORT;
-
-// Middleware to parse JSON
 app.use(express.json());
-app.use(router);
 
-// Connect to MongoDB
+app.use(cors());
+app.use(router);
+app.use('/todo',todorouter);
 connectDB();
 
-
-// Start server
-app.listen(PORT, () => {
-    console.log(`Server is running on port http://localhost:${PORT}`);
-});
+app.listen(PORT,()=>{
+    console.log(`server running on port 'http://localhost:${PORT}`)
+})
