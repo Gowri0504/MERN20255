@@ -5,10 +5,10 @@ const Todo = () => {
     const [task, setTask] = useState('')
     const [todo, setTodo] = useState([])
     const [editing, setediting] = useState(null)
-    const api = 'http://localhost:3000/todo'
+    const api = 'https://mern20255.onrender.com'
 
     const fetchTodo = async () => {
-        const response = await axios.get(`${api}/get`);
+        const response = await axios.get(`${api}/todo/get`);
         console.log(response.data);
         setTodo(response.data.data);
     }
@@ -19,11 +19,11 @@ const Todo = () => {
     const handleAddOREdit = async (e) => {
         e.preventDefault();
         if (editing) {
-            await axios.put(`${api}/put/${editing}`, { task })
+            await axios.put(`${api}/todo/put/${editing}`, { task })
 
         }
         else {
-            await axios.post(`${api}/post/`, { task })
+            await axios.post(`${api}/todo/post/`, { task })
 
         }
 
@@ -31,13 +31,13 @@ const Todo = () => {
         fetchTodo()
     }
     const handleDelete = async (id) => {
-        await axios.delete(`${api}/delete/${id}`);
+        await axios.delete(`${api}/todo/delete/${id}`);
         fetchTodo()
         console.log('Delete')
     }
 
     const handleToggleStatus = async (todo) => {
-        await axios.put(`${api}/put/${todo._id}`, {
+        await axios.put(`${api}/todo/put/${todo._id}`, {
             status: !todo.status
         })
         fetchTodo()
