@@ -5,12 +5,12 @@ const Todo = () => {
     const [task, setTask] = useState('')
     const [todo, setTodo] = useState([])
     const [editing, setediting] = useState(null)
-    const api = 'http://localhost:3000'
+    const api = 'https://mern20255-2.onrender.com'
 
     const fetchTodo = async () => {
         const response = await axios.get(`${api}/todo/get`);
         console.log(response.data);
-        setTodo(response.data.data);
+        setTodo(response.data);
     }
     useEffect(() => {
         fetchTodo()
