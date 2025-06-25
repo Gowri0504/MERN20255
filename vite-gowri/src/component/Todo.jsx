@@ -5,7 +5,7 @@ const Todo = () => {
     const [task, setTask] = useState('')
     const [todo, setTodo] = useState([])
     const [editing, setediting] = useState(null)
-    const api = 'https://mern20255.onrender.com'
+    const api = 'http://localhost:3000'
 
     const fetchTodo = async () => {
         const response = await axios.get(`${api}/todo/get`);
